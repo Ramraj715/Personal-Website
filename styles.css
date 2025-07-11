@@ -542,3 +542,23 @@ section:not(.hero-section) .lead {
 #blog .blog-content p {
     color: #000 !important;
 } 
+
+/* Gallery section text color override */
+#gallery .gallery-placeholder p {
+    color: #000 !important;
+} 
+
+/* Testimonials section text color override */
+#testimonials .testimonials-placeholder p {
+    color: #000 !important;
+}
+
+/* Certificates & Awards section title color override */
+#certificates .section-title {
+    color: #fff !important;
+} 
+
+/* Certificates section text color override */
+#certificates .certificates-placeholder p {
+    color: #000 !important;
+} 
