@@ -534,3 +534,11 @@ section:not(.hero-section) .lead {
 .contact-info .contact-item * {
     color: #222 !important;
 } 
+
+/* Blog section text color override */
+#blog .blog-title,
+#blog .blog-meta,
+#blog .blog-content .lead,
+#blog .blog-content p {
+    color: #000 !important;
+} 
