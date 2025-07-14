@@ -196,6 +196,12 @@ body {
     margin: 0;
 }
 
+/* Scale down Portfolio section icons to half size */
+.highlight-card i {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.5rem;
+}
+
 /* Resume Section */
 .resume-section {
     background: white;
@@ -692,4 +698,21 @@ section.py-5, section.bg-light.py-5, #portfolio.py-5, #resume.py-5, #blog.py-5, 
 }
 .about-content .lead {
     font-size: 1.045rem;
+} 
+
+/* Double the size of My Work & Portfolio section title */
+#portfolio .section-title {
+    font-size: 3rem !important;
+}
+#portfolio .title-underline {
+    height: 8px;
+    width: 160px;
+} 
+
+/* Double the size of About Me and Mr. Ramraj Rajbanshi */
+#about .section-title {
+    font-size: 3rem !important;
+}
+.about-content h3 {
+    font-size: 2.42rem !important;
 } 
