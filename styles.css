@@ -562,3 +562,19 @@ section:not(.hero-section) .lead {
 #certificates .certificates-placeholder p {
     color: #000 !important;
 } 
+
+/* Sub Navigation Custom Style */
+.sub-navbar {
+    background: linear-gradient(180deg, #27a5f9 0%, #23a2f6 100%);
+    color: #fff !important;
+}
+.sub-navbar .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.sub-navbar .nav-link:hover,
+.sub-navbar .nav-link:focus {
+    color: #e3f2fd !important;
+    text-decoration: underline;
+} 
