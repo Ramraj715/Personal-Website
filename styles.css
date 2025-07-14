@@ -578,3 +578,118 @@ section:not(.hero-section) .lead {
     color: #e3f2fd !important;
     text-decoration: underline;
 } 
+
+/* Minimized About Section */
+#about.py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+#about .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+#about .title-underline {
+    width: 40px;
+    height: 3px;
+    margin-bottom: 0.5rem;
+}
+.about-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+.about-content .lead {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+.about-details {
+    margin-top: 0.5rem;
+}
+.detail-item {
+    padding: 6px 10px;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+.detail-item i {
+    font-size: 1rem;
+    width: 22px;
+    margin-right: 8px;
+}
+.about-image img {
+    max-width: 120px !important;
+    border-width: 2px !important;
+}
+@media (max-width: 768px) {
+    #about .section-title {
+        font-size: 1.1rem;
+    }
+    .about-image img {
+        max-width: 80px !important;
+    }
+} 
+
+/* Minimized Main Sections */
+section.py-5, section.bg-light.py-5, #portfolio.py-5, #resume.py-5, #blog.py-5, #gallery.py-5, #testimonials.py-5, #certificates.py-5, #contact.py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+}
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.title-underline {
+    width: 40px;
+    height: 3px;
+    margin-bottom: 0.5rem;
+}
+.resume-section-title, .blog-title, .gallery-placeholder, .testimonials-placeholder, .certificates-placeholder, .contact-info {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+.resume-section p, .blog-post, .gallery-placeholder p, .testimonials-placeholder p, .certificates-placeholder p, .contact-info p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 1.1rem;
+    }
+} 
+
+/* Further Minimized Main Sections (20% smaller) */
+section.py-5, section.bg-light.py-5, #portfolio.py-5, #resume.py-5, #blog.py-5, #gallery.py-5, #testimonials.py-5, #certificates.py-5, #contact.py-5 {
+    padding-top: 1.6rem !important;
+    padding-bottom: 1.6rem !important;
+}
+.section-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+}
+.title-underline {
+    width: 32px;
+    height: 2.5px;
+    margin-bottom: 0.4rem;
+}
+.resume-section-title, .blog-title, .gallery-placeholder, .testimonials-placeholder, .certificates-placeholder, .contact-info {
+    font-size: 0.88rem;
+    margin-bottom: 0.4rem;
+}
+.resume-section p, .blog-post, .gallery-placeholder p, .testimonials-placeholder p, .certificates-placeholder p, .contact-info p {
+    font-size: 0.76rem;
+    line-height: 1.4;
+    margin-bottom: 0.4rem;
+}
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 0.88rem;
+    }
+} 
+
+/* Enlarge About section name and description by 10% */
+.about-content h3 {
+    font-size: 1.21rem;
+}
+.about-content .lead {
+    font-size: 1.045rem;
+} 
