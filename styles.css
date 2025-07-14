@@ -847,3 +847,30 @@ section.py-5, section.bg-light.py-5, #portfolio.py-5, #resume.py-5, #blog.py-5, 
     padding: 0.5em 0.7em;
     display: inline-block;
 } 
+
+/* Light sky blue theme for all icon boxes */
+.about-details .detail-item i,
+.highlight-card i,
+.gallery-placeholder i,
+.testimonials-placeholder i,
+.certificates-placeholder i,
+.contact-info i {
+    background: #b3e5fc !important;
+    color: #fff !important;
+    border-radius: 16px;
+    padding: 0.5em 0.7em;
+    display: inline-block;
+} 
+
+/* Linkable highlighted icons for icon boxes */
+.icon-link {
+    cursor: pointer;
+    transition: box-shadow 0.2s, background 0.2s;
+    border-radius: 16px;
+    display: inline-block;
+}
+.icon-link:hover i {
+    background: #4fc3f7 !important;
+    box-shadow: 0 4px 16px rgba(33, 150, 243, 0.2);
+    color: #fff !important;
+} 
