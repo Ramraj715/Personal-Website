@@ -716,3 +716,134 @@ section.py-5, section.bg-light.py-5, #portfolio.py-5, #resume.py-5, #blog.py-5, 
 .about-content h3 {
     font-size: 2.42rem !important;
 } 
+
+/* Double the size of About section image and its circle */
+.about-image {
+    width: 960px;
+    height: 960px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 8px solid #e9ecef;
+    background: #f8f9fa;
+    overflow: hidden;
+}
+.about-image img {
+    width: 100%;
+    height: 100%;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover;
+    border-radius: 50%;
+    border: none;
+}
+@media (max-width: 768px) {
+    .about-image {
+        width: 640px;
+        height: 640px;
+    }
+} 
+
+/* Double the size of About section image once more */
+.about-image img {
+    max-width: 960px !important;
+}
+@media (max-width: 768px) {
+    .about-image img {
+        max-width: 640px !important;
+    }
+} 
+
+/* Minimize space between My Work & Portfolio and Current Position to 0.5 inch */
+#portfolio .section-title {
+    margin-bottom: 0.25in !important;
+}
+#portfolio .portfolio-content h3 {
+    margin-top: 0.25in !important;
+} 
+
+/* Minimize Gallery placeholder to half size */
+.gallery-placeholder {
+    padding: 1rem !important;
+}
+.gallery-placeholder i {
+    font-size: 2.5rem !important;
+}
+.gallery-placeholder p {
+    font-size: 0.7rem !important;
+} 
+
+/* Minimize Testimonials placeholder to half size */
+.testimonials-placeholder {
+    padding: 1rem !important;
+}
+.testimonials-placeholder i {
+    font-size: 2.5rem !important;
+}
+.testimonials-placeholder p {
+    font-size: 0.7rem !important;
+} 
+
+/* Double the font size of Gallery placeholder text */
+.gallery-placeholder p {
+    font-size: 1.4rem !important;
+} 
+
+/* Double the font size of only the first paragraph in Gallery placeholder */
+.gallery-placeholder p:first-child {
+    font-size: 2.8rem !important;
+} 
+
+/* Minimize Get in Touch (Contact) section area and icon size */
+#contact.py-5 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+.contact-info {
+    padding: 0.5rem !important;
+}
+.contact-info i {
+    font-size: 1.2rem !important;
+} 
+
+/* Beautify and minimize line spacing in Get in Touch section */
+.contact-info p {
+    margin-bottom: 0.3rem !important;
+    line-height: 1.3 !important;
+}
+.contact-info .contact-item {
+    margin-bottom: 0.4rem !important;
+    padding: 0.4rem 0.7rem !important;
+} 
+
+/* Colorful icon backgrounds for icon boxes from Gallery to last section */
+.gallery-placeholder i {
+    background: #4f8cff;
+    color: #fff !important;
+    border-radius: 16px;
+    padding: 0.5em 0.7em;
+    display: inline-block;
+}
+.testimonials-placeholder i {
+    background: #ffb84f;
+    color: #fff !important;
+    border-radius: 16px;
+    padding: 0.5em 0.7em;
+    display: inline-block;
+}
+.certificates-placeholder i {
+    background: #4fd6b8;
+    color: #fff !important;
+    border-radius: 16px;
+    padding: 0.5em 0.7em;
+    display: inline-block;
+}
+.contact-info i {
+    background: #ff4f81;
+    color: #fff !important;
+    border-radius: 16px;
+    padding: 0.5em 0.7em;
+    display: inline-block;
+} 
