@@ -355,7 +355,7 @@ footer {
 }
 
 footer p.mb-2 {
-    font-size: 30px;
+    font-size: 2rem !important;
 }
 
 /* Responsive Design */
@@ -567,6 +567,16 @@ section:not(.hero-section) .lead {
 /* Certificates section text color override */
 #certificates .certificates-placeholder p {
     color: #000 !important;
+} 
+
+/* Double the size of Certificates & Awards section title */
+#certificates .section-title {
+    font-size: 1.5rem !important;
+} 
+
+/* Enlarge Certificates & Awards section title by 100% */
+#certificates .section-title {
+    font-size: 3rem !important;
 } 
 
 /* Sub Navigation Custom Style */
@@ -873,4 +883,95 @@ section.py-5, section.bg-light.py-5, #portfolio.py-5, #resume.py-5, #blog.py-5, 
     background: #4fc3f7 !important;
     box-shadow: 0 4px 16px rgba(33, 150, 243, 0.2);
     color: #fff !important;
+} 
+
+/* Match About section image to Home section profile image */
+.about-image {
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    overflow: visible;
+}
+.about-image img {
+    max-width: 300px !important;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    background: #f8f9fa;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+}
+@media (max-width: 768px) {
+    .about-image img {
+        max-width: 200px !important;
+    }
+} 
+
+/* Scale down Certificates, Get in Touch, and Downloadables sections by 50% */
+#certificates.py-5, #contact.py-5, #downloadables.py-5 {
+    padding-top: 0.8rem !important;
+    padding-bottom: 0.8rem !important;
+}
+.certificates-placeholder, .contact-info, .downloadables-placeholder {
+    padding: 0.5rem !important;
+}
+.certificates-placeholder i, .downloadables-placeholder i, .contact-info i {
+    font-size: 1.25rem !important;
+    padding: 0.3em 0.5em !important;
+}
+.certificates-placeholder p, .downloadables-placeholder p, .contact-info p, .contact-info span, .contact-info a {
+    font-size: 0.7rem !important;
+}
+#certificates .section-title, #contact .section-title, #downloadables .section-title {
+    font-size: 0.75rem !important;
+    margin-bottom: 0.3rem !important;
+}
+#certificates .title-underline, #contact .title-underline, #downloadables .title-underline {
+    width: 20px;
+    height: 2px;
+    margin-bottom: 0.2rem;
+} 
+
+/* Match Certificates & Awards section title font size to Testimonials & Reviews */
+#certificates .section-title {
+    font-size: 2.5rem !important;
+} 
+
+/* Reduce Certificates & Awards section title font size to half */
+#certificates .section-title {
+    font-size: 1.25rem !important;
+} 
+
+/* Match Get in Touch section title font size to Certificates & Awards */
+#contact .section-title {
+    font-size: 1.25rem !important;
+} 
+
+/* Match Downloadable Resources section title font size to Get in Touch */
+#downloadables .section-title {
+    font-size: 1.25rem !important;
+} 
+
+/* Make both boxes in Get in Touch section equal size */
+#contact .row {
+    display: flex;
+    align-items: stretch;
+}
+#contact .contact-info, #contact .contact-form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+} 
+
+/* Enlarge Downloadable Resources icon size by 300% */
+.downloadables-placeholder i {
+    font-size: 3.75rem !important;
 } 
