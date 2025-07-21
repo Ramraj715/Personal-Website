@@ -476,56 +476,76 @@
         </div>
     </section>
 
-    <!-- Grade-XII English Notes Folder Structure Section -->
+    <!-- Grade-XII English Notes Folder Structure Section (Collapsible with Files) -->
     <section id="grade12-folders" class="py-5 bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-start mb-4">
-                    <div style="font-size: 1.5rem; font-weight: bold;">Grade-XII English Note</div>
-                    <div style="margin-left: 2rem; margin-top: 1rem;">
-                        <div style="font-size: 1.2rem; font-weight: bold;">Poem</div>
-                        <div class="row justify-content-start" style="margin-left: 2rem;">
-                            <div class="col-auto text-center mb-3">
-                                <a href="Poems/A Day.pdf" download title="A Day.pdf">
-                                    <i class="fa-regular fa-file-pdf fa-2x" style="color: #d32f2f;"></i>
+                    <div id="main-folder" style="font-size: 1.5rem; font-weight: bold; cursor: pointer; user-select: none;">
+                        📁 Grade-XII English Note
+                    </div>
+                    <div id="subfolders" class="mt-2" style="display: none; margin-left: 2rem;">
+                        <div id="poem-folder" class="subfolder" style="font-size: 1.1rem; margin-bottom: 0.5rem; cursor: pointer; user-select: none;">
+                            📄 Poem
+                        </div>
+                        <div id="poem-files" style="display: none; margin-left: 2rem;">
+                            <div class="poem-file mb-2">
+                                <a href="Poems/A Day.pdf" download style="text-decoration: none;">
+                                    <i class="fa-regular fa-file-pdf" style="color: #d32f2f;"></i> A Day
                                 </a>
-                                <div style="font-size: 0.95rem; color: #222;">A Day</div>
                             </div>
-                            <div class="col-auto text-center mb-3">
-                                <a href="Poems/Every Morning I Wake.pdf" download title="Every Morning I Wake.pdf">
-                                    <i class="fa-regular fa-file-pdf fa-2x" style="color: #d32f2f;"></i>
+                            <div class="poem-file mb-2">
+                                <a href="Poems/Every Morning I Wake.pdf" download style="text-decoration: none;">
+                                    <i class="fa-regular fa-file-pdf" style="color: #d32f2f;"></i> Every Morning I Wake
                                 </a>
-                                <div style="font-size: 0.95rem; color: #222;">Every Morning I Wake</div>
                             </div>
-                            <div class="col-auto text-center mb-3">
-                                <a href="Poems/I Was My Own Route.pdf" download title="I Was My Own Route.pdf">
-                                    <i class="fa-regular fa-file-pdf fa-2x" style="color: #d32f2f;"></i>
+                            <div class="poem-file mb-2">
+                                <a href="Poems/I Was My Own Route.pdf" download style="text-decoration: none;">
+                                    <i class="fa-regular fa-file-pdf" style="color: #d32f2f;"></i> I Was My Own Route
                                 </a>
-                                <div style="font-size: 0.95rem; color: #222;">I Was My Own Route</div>
                             </div>
-                            <div class="col-auto text-center mb-3">
-                                <a href="Poems/Soft Storm.pdf" download title="Soft Storm.pdf">
-                                    <i class="fa-regular fa-file-pdf fa-2x" style="color: #d32f2f;"></i>
+                            <div class="poem-file mb-2">
+                                <a href="Poems/Soft Storm.pdf" download style="text-decoration: none;">
+                                    <i class="fa-regular fa-file-pdf" style="color: #d32f2f;"></i> Soft Storm
                                 </a>
-                                <div style="font-size: 0.95rem; color: #222;">Soft Storm</div>
                             </div>
-                            <div class="col-auto text-center mb-3">
-                                <a href="Poems/The Awakening Age.pdf" download title="The Awakening Age.pdf">
-                                    <i class="fa-regular fa-file-pdf fa-2x" style="color: #d32f2f;"></i>
+                            <div class="poem-file mb-2">
+                                <a href="Poems/The Awakening Age.pdf" download style="text-decoration: none;">
+                                    <i class="fa-regular fa-file-pdf" style="color: #d32f2f;"></i> The Awakening Age
                                 </a>
-                                <div style="font-size: 0.95rem; color: #222;">The Awakening Age</div>
                             </div>
                         </div>
-                        <div style="font-size: 1.2rem; font-weight: bold; margin-top: 1.5rem;">Short Stories</div>
-                        <div style="margin-left: 2rem; color: #888; font-size: 1rem;">(No files yet)</div>
-                        <div style="font-size: 1.2rem; font-weight: bold; margin-top: 1.5rem;">Essays</div>
-                        <div style="margin-left: 2rem; color: #888; font-size: 1rem;">(No files yet)</div>
-                        <div style="font-size: 1.2rem; font-weight: bold; margin-top: 1.5rem;">One Act Plays</div>
-                        <div style="margin-left: 2rem; color: #888; font-size: 1rem;">(No files yet)</div>
+                        <div class="subfolder" style="font-size: 1.1rem; margin-bottom: 0.5rem;">📄 Short Stories</div>
+                        <div class="subfolder" style="font-size: 1.1rem; margin-bottom: 0.5rem;">📄 Essay</div>
+                        <div class="subfolder" style="font-size: 1.1rem;">📄 One Act Play</div>
                     </div>
                 </div>
             </div>
         </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var mainFolder = document.getElementById('main-folder');
+                var subfolders = document.getElementById('subfolders');
+                var poemFolder = document.getElementById('poem-folder');
+                var poemFiles = document.getElementById('poem-files');
+                mainFolder.addEventListener('click', function() {
+                    if (subfolders.style.display === 'none') {
+                        subfolders.style.display = 'block';
+                    } else {
+                        subfolders.style.display = 'none';
+                        poemFiles.style.display = 'none'; // collapse poem files if closing all
+                    }
+                });
+                poemFolder.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    if (poemFiles.style.display === 'none') {
+                        poemFiles.style.display = 'block';
+                    } else {
+                        poemFiles.style.display = 'none';
+                    }
+                });
+            });
+        </script>
     </section>
 
     <!-- Footer -->
