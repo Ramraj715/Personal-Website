@@ -975,3 +975,14 @@ section.py-5, section.bg-light.py-5, #portfolio.py-5, #resume.py-5, #blog.py-5, 
 .downloadables-placeholder i {
     font-size: 3.75rem !important;
 } 
+
+/* Ensure folder structure section is visible and readable */
+#grade12-folders, #grade12-folders * {
+    color: #222 !important;
+}
+#grade12-folders a {
+    color: #d32f2f !important;
+}
+#grade12-folders i.fa-file-pdf {
+    color: #d32f2f !important;
+} 
