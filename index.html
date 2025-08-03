@@ -477,7 +477,7 @@
     </section>
 
     <!-- Grade-XI English Notes Section -->
-    <section id="grade11-english-note" class="py-5 bg-light">
+    <section id="grade11-english-note" class="py-5 bg-light" style="display: none;">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-start mb-4">
@@ -519,7 +519,7 @@
     </section>
 
     <!-- Grade-XII English Notes Section -->
-    <section id="grade12-english-note" class="py-5">
+    <section id="grade12-english-note" class="py-5" style="display: none;">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-start mb-4">
@@ -687,6 +687,56 @@
     <!-- Folder toggling script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // Hide all sections initially
+            const allSections = document.querySelectorAll('section[id]');
+            allSections.forEach(section => {
+                if (section.id !== 'home' && section.id !== 'about' && section.id !== 'portfolio' && 
+                    section.id !== 'resume' && section.id !== 'blog' && section.id !== 'gallery' && 
+                    section.id !== 'testimonials' && section.id !== 'certificates' && section.id !== 'contact' && 
+                    section.id !== 'downloadables') {
+                    section.style.display = 'none';
+                }
+            });
+
+            // Navigation functionality
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    
+                    if (href === '#grade11-english-note' || href === '#grade12-english-note') {
+                        e.preventDefault();
+                        
+                        // Hide all sections first
+                        allSections.forEach(section => {
+                            if (section.id !== 'home' && section.id !== 'about' && section.id !== 'portfolio' && 
+                                section.id !== 'resume' && section.id !== 'blog' && section.id !== 'gallery' && 
+                                section.id !== 'testimonials' && section.id !== 'certificates' && section.id !== 'contact' && 
+                                section.id !== 'downloadables') {
+                                section.style.display = 'none';
+                            }
+                        });
+                        
+                        // Show the selected section
+                        if (href === '#grade11-english-note') {
+                            document.getElementById('grade11-english-note').style.display = 'block';
+                        } else if (href === '#grade12-english-note') {
+                            document.getElementById('grade12-english-note').style.display = 'block';
+                        }
+                        
+                        // Scroll to the section
+                        const targetSection = document.querySelector(href);
+                        if (targetSection) {
+                            const offsetTop = targetSection.offsetTop - 120; // Account for fixed navbar
+                            window.scrollTo({
+                                top: offsetTop,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
             // Grade-XI English Note functionality
             const grade11MainFolder = document.getElementById('grade11-main-folder');
             const grade11Subfolders = document.getElementById('grade11-subfolders');
