@@ -25,7 +25,7 @@ body {
 
 .nav-link {
     font-weight: 500;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .nav-link:hover {
@@ -34,7 +34,7 @@ body {
 
 .navbar .nav-link {
     color: #fff !important;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .navbar .nav-link.active,
@@ -42,6 +42,74 @@ body {
 .navbar .nav-link:active {
     color: #000 !important; /* Black highlight */
     font-weight: 700;
+}
+
+/* Sub Navigation */
+.sub-navbar {
+    background-color: #f1f8ff;
+    padding: 0.5rem 0;
+    z-index: 1020;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.sub-navbar .navbar-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding: 0.25rem 0.5rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.sub-navbar .navbar-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.sub-navbar .nav-link {
+    color: #2c3e50 !important;
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    border-radius: 4px;
+    margin: 0 2px;
+    white-space: nowrap;
+}
+
+.sub-navbar .nav-link:hover {
+    color: #0d6efd !important;
+    background-color: rgba(13, 110, 253, 0.1);
+    transform: translateY(-1px);
+}
+
+.sub-navbar .nav-link.active {
+    color: #ffffff !important;
+    background-color: #0d6efd;
+    box-shadow: 0 2px 5px rgba(13, 110, 253, 0.3);
+}
+
+.navbar-nav .nav-item {
+    display: inline-block;
+    float: none;
+}
+
+@media (max-width: 1200px) {
+    .sub-navbar .nav-link {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sub-navbar .nav-link {
+        font-size: 0.7rem;
+        padding: 0.3rem 0.6rem;
+    }
 }
 
 /* Hero Section */
